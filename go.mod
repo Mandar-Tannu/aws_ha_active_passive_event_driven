@@ -1,0 +1,2 @@
+module aws_ha_active_passive_event_driven
+go 1.23
