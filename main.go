@@ -236,6 +236,6 @@ func main() {
 	http.HandleFunc("/submit", submitHandler)
 	http.HandleFunc("/health", healthHandler)
 
-	log.Printf("level=INFO service=go-app event=server_started port=8443_tls instance=%s", instanceID)
-	log.Fatal(http.ListenAndServeTLS(":8443", "certs/server.crt", "certs/server.key", nil))
+	log.Printf("level=INFO service=go-app event=server_started port=8080 instance=%s", instanceID)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
